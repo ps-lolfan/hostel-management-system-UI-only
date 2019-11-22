@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Material Login Form</title>
+    
+    
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    <style>
+      .styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 39px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+}
+
+.styled-select.slate {
+   background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+   height: 34px;
+   width: 300px;
+}
+
+.styled-select.slate select {
+   border: 3px solid #ccc;
+   font-size: 66px;
+   height: 34px;
+   width: 268px;
+}
+
+/* -------------------- Rounded Corners */
+.rounded {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+}
+
+.semi-square {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+/* -------------------- Colors: Background */
+.slate   { background-color: #ddd; }
+.green   { background-color: #779126; }
+.blue    { background-color: #3b8ec2; }
+.yellow  { background-color: #eec111; }
+.black   { background-color: #000; }
+
+/* -------------------- Colors: Text */
+.slate select   { color: #000; }
+.green select   { color: #fff; }
+.blue select    { color: #fff; }
+.yellow select  { color: #000; }
+.black select   { color: #fff; }
+
+
+    </style>
+    
+  </head>
+
+  <body>
+
+    
+<!-- Mixins-->
+<!-- Pen Title-->
+<div class="pen-title">
+  
+</div>
+<div class="container">
+  <div class="card"></div>
+  <div class="card">
+    <h1 class="title">Login</h1>
+    <form name="f1">
+      <div class="input-container">
+        <select id="country" name="UserType" class="styled-select slate">
+      <option value="warden">Warden</option>
+      <option value="managers">Managers</option>
+      <option value="students">Students</option>
+    </select>
+  </div>
+  <div class="input-container">
+        <input type="text" id="Username"  name="Username"required="required"/>
+        <label for="Username">Username</label>
+        <div class="bar"></div>
+      </div>
+       <div class="input-container">
+        <input type="text" id="Username"  name="Username"required="required"/>
+        <label for="Username">Username</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="password" id="Password"  name="lastname" required="required"/>
+        <label for="Password">Password</label>
+        <div class="bar"></div>
+      </div>
+    <div class="button-container">
+        <button id="demo"   onclick="validate()"><span>Go</span></button>
+      </div>
+      <div class="footer"><a href="#">Forgot your password?</a></div>
+    </form>
+  </div>
+  
+    </h1>
+    <form>
+      
+      
+<!-- Portfolio-->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="js/index.js"></script>
+        <script type="text/javascript">
+function validate()
+{
+  var username=f1.Username.value;
+  var pass=f1.lastname.value;
+  var type=f1.UserType.value;
+  if(type=='warden')
+  {
+      
+  if(username==null || username=="" && pass==null || pass=="")
+  {
+    alert("Provide Login Credentials");
+  }
+  else if(username=="kletech" && pass=="123456")
+  {
+    
+    window.open("mobile.html"); 
+  }
+  else
+  {
+  alert("Login Unsuccessful");
+  }
+}
+   else if(type=='managers')
+   {
+        if(username==null || username=="" && pass==null || pass=="")
+  {
+    alert("Provide Login Credentials");
+  }
+  else if(username=="kletech" && pass=="123456")
+  {
+    
+    window.open("mobile2.html"); 
+  }
+  else
+  {
+  alert("Login Unsuccessful");
+  }     
+}
+
+   else
+{
+         if(username==null || username=="" && pass==null || pass=="")
+  {
+    alert("Provide Login Credentials");
+  }
+  else if(username=="kletech" && pass=="123456")
+  {
+    
+    window.open("mobile3.html"); 
+  }
+  else
+  {
+  alert("Login Unsuccessful");
+  }
+
+}
+}
+</script>  
+
+    
+    
+    
+  </body>
+</html>

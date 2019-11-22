@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DASHBOARD</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<script type="text/javascript">
+  function ppp()
+  {
+    window.print();
+  }
+</script>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 12%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-family:Verdana;
+    font-size: 16px;
+    font-variant: bold; 
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+input[type=text], select {
+    width: 38%;
+    padding: 7px;
+    margin: 5px 0;
+    display:inline-block;
+    border: 0.5px solid #ccc;
+    border-radius: 1px;
+      font-color:white;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.mn
+{
+  font-size: 20px;
+  font-family: Verdana;
+  font-color:white;
+  font-weight: bolder;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: gray;
+  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+#name{
+  font-size: 40px;
+}
+#ecm{
+  font-size: 100px;
+  word-spacing: 1.5;
+  text-align: center;
+}
+
+.topnav a{
+  float:left;
+  display:block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#search{
+  margin-top: 30px;
+  height: 27px;
+  border:none;
+  font-family: Verdana;
+  font-size: 14px;
+  color:black;
+  margin-left: 50px;
+}
+
+#search-btn{
+  border:none;
+  width: 60px;
+  height: 30px;background-color: forestgreen;
+  font-size: 14px;
+
+}
+
+/* Style the side navigation */
+.sidenav {
+  top:9%;
+    height: 150%;
+    width: 255px;
+    position:absolute;
+    z-index: 1;
+    left: 2;
+    background-color: aqua;
+    overflow-x: hidden;
+   
+}
+
+
+/* Side navigation links */
+.sidenav a {
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: Verdana;
+}
+
+/* Change color on hover */
+.sidenav a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the content */
+.content1 {
+     margin-left: 10px;
+    padding-left: 10px;
+    margin-top: 2px;
+  
+    
+}
+
+
+
+.item{
+  border:2px solid black;
+  width: 300px;
+  float: left;
+  margin: 30px;
+}
+.item h1{
+  text-align: center;
+}
+.view-item{
+  background-color: green;
+  margin-left: 35%;
+  padding: 5px;
+  text-decoration:none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  border:1px solid black;
+}
+
+.priceinfo li{
+  list-style-type: none;
+  line-height: 2.5;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+.itemdisc{
+  margin-top: 50px;
+  float: left;
+  margin-left: 30px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+
+.buybtn{
+  background-color: #46F34B;
+  padding: 10px;
+  color: white;
+  text-decoration-line: none;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+.buybtn:hover{
+  background-color:green; 
+}
+.cartbtn{
+  background-color: #F9C940;
+  padding: 10px;
+  color: white;
+  text-decoration-line: none;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+.cartbtn:hover{
+  background-color:#F79209; 
+}
+
+#catg p{
+  
+  color: black;
+  font-size: 17px;
+  font-family: Verdana;
+  text-align: center;
+}
+#catg input{
+
+  margin-top: 0;
+  border-width: 18px;
+  margin-left: 0;
+}
+
+/* special effects span tag in item disc */
+#splchar{
+  color: blue;
+}
+
+.view-item_book{
+  margin-left: 15px;
+  background-color: green;
+  padding: 10px;
+  color: white;
+  text-decoration-line: none;
+  margin:10px;
+}
+
+#Reviews{
+  margin-top: 10px;
+  margin:30px;
+  line-height: 1;
+  font-size: 18px;
+
+}
+/* Create two equal columns that floats next to each other */
+.column {
+    float: right;
+    width: 49%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color:#fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    column-span: 2px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<script>
+
+</script>
+
+</head>
+<body>
+  
+
+
+
+
+ 
+    
+
+       
+ 
+  
+ 
+
+
+<div class="topnav">
+  <span id="name"><font color="yellow"><text align="center">View Managers</text></font></span>   <b><a href="mobile.html">Back </a></b>
+</div>
+<br>
+<br>
+
+
+
+     
+
+    
+        <div class="content1">
+       
+
+
+
+
+
+
+
+
+<h2>Report</h2>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<img src="printer.jpg" style="width:80px;height: 80px;" onclick="ppp()">
+
+<table>
+  <tr>
+    <th>Managers Name</th>
+    <th>Managers Id</th>
+    <th>Joining Date</th>
+    <th>Mobile Number</th>
+    <th>Address</th>
+  
+  </tr>
+  <tr>
+    <td>Gururaj.Kulkarni</td>
+    <td>12e345</td>
+    <td>22-08-2012</td>
+    <td>9740199373</td>
+    <td>Ashram Road,Hubli</td>
+  </tr>
+  <tr>
+     <td>Anirune.Kulkarni</td>
+    <td>12e345</td>
+    <td>22-08-2012</td>
+    <td>9740199373</td>
+    <td>Ashram Road,Hubli</td>
+  </tr>
+  <tr>
+     <td>Raghu.Kulkarni</td>
+    <td>12e345</td>
+    <td>22-08-2012</td>
+    <td>9740199373</td>
+    <td>Ashram Road,Hubli</td>
+  </tr>
+  <tr>
+     <td>Abhi.Kulkarni</td>
+    <td>12e345</td>
+    <td>22-08-2012</td>
+    <td>9740199373</td>
+    <td>Ashram Road,Hubli</td>
+  </tr>
+  <tr>
+     <td>Ram.Kulkarni</td>
+    <td>12e345</td>
+    <td>22-08-2012</td>
+    <td>9740199373</td>
+    <td>Ashram Road,Hubli</td>
+  </tr>
+  <tr>
+     <td>Raj.Kulkarni</td>
+    <td>12e345</td>
+    <td>22-08-2012</td>
+    <td>9740199373</td>
+    <td>Ashram Road,Hubli</td>
+  </tr>
+</table>
+
+
+
+
+
+
+        </div>
+
+  
+
+</body>
+</html>

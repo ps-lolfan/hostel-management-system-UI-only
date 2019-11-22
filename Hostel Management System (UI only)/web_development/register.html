@@ -1,0 +1,257 @@
+
+
+
+<html>
+ 
+<head>
+ 
+    <title>Registration Form</title>
+
+
+
+<style>
+body
+{
+background-color:#FFF8DC;
+}
+p
+{
+font-size:18px;
+}
+html{
+    background-color:white;
+}
+
+
+
+body {
+	font: 100% Georgia, "Times New Roman", Times, serif;
+	line-height: 1.4;
+	width: 72%;
+	margin: 0 auto;
+	padding-bottom: 20em;
+}
+</style>
+</head>
+<body>
+    <table width="975"height="10"padding="5000;"margin:"0.5in;">
+<tr >
+        <td colspan="2" style="background-color:maroon;">
+           <marquee>
+
+    <p class="one"><h1><font color="white">KLETech University(Formerly BVB)<br><font size="2">Vidya Nagar, Hubballi, Karnataka 580031</h1></p></marquee>
+       
+        </td></tr>
+
+</table>
+
+
+ 
+    <script type="text/javascript">
+        function Captcha(){
+                     var alpha = new Array("What is 1+2","what is 2+3");
+                     
+                    
+                  
+
+                     var i;
+                     for (i=0;i<=3;i++){
+                       var a = alpha[Math.floor(Math.random() * alpha.length)];
+                      // var b = alpha[Math.floor(Math.random() * alpha.length)];
+                       //var c = alpha[Math.floor(Math.random() * alpha.length)];
+
+                      }
+                    var code = a;
+                    document.getElementById("mainCaptcha").value = code
+                  }
+                  function ValidCaptcha(){
+                      var string1 = document.getElementById('mainCaptcha').value;
+                      var string2 = removeSpaces(document.getElementById('txtInput').value);
+                     
+                      if ((string1 =="What is 1+2"  && string2==3) || (string1=="what is 2+3" && string2==5))
+
+                        return true;
+                     else     
+                        return false;
+                      
+                  }
+                  function removeSpaces(string){
+                    return string.split(' ').join('');
+                  }
+
+
+
+        function validate_form() {
+            if (document.emp.studentname.value == "") {
+                alert("Please fill in the 'Student's Name' box.");
+                return false;
+            }
+            if (document.emp.intermediaryname.value == "") {
+                alert("Enter Intermediatory Name");
+                return false;
+            }
+ 
+if (document.emp.depname.value == "") {
+                alert("Enter Department Name");
+                return false;
+            }
+
+if (document.emp.address.value == "") {
+                alert("Enter Postal Address");
+                 return false;
+            }
+
+
+
+if (document.emp.homeno.value == "") {
+                alert("Enter Telphone Number");
+                return false;
+            }
+if (document.emp.address.value == "") {
+                alert("Enter Postal Address");
+                return false;
+            }
+if (document.emp.docs.value == "") {
+                alert("Enter Documentation");
+                return false;
+            }
+
+if (document.emp.institute.value == "") {
+                alert("Enter Previous Institute?");
+                return false;
+            }
+if (document.emp.marks1.value == "") {
+                alert("Enter Marks obtained");
+                return false;
+            }
+if (document.emp.completion.value == "") {
+                alert("Enter Completion Year");
+                return false;
+            }
+if (document.emp.firstlastname.value == "") {
+                alert("Enter First And Last Name");
+                return false;
+            }
+
+if (document.emp.placeedu.value == "") {
+                alert("Enter Place Of Education");
+                return false;
+            }
+if (document.emp.contactno2.value == "") {
+                alert("Enter Contact Num");
+                return false;
+            }
+             alert("Sucessfully Submitted");
+ 
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(document.emp.email_id.value)) {
+                alert("You have entered an invalid email address!")
+                return (false)
+            }
+        }
+ 
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode != 46 && charCode > 31 &&
+               (charCode < 48 || charCode > 57)) {
+               alert("Enter Number");
+               return false;
+            }
+            return true;
+        }
+ 
+    </script>
+ 
+</head>
+    
+<body bgcolor="#FFF8DC" onload="Captcha();">   <body background="bv.jpg"> <height="100%">  <width:"100%">
+    <form name="emp" action="" onsubmit="return validate_form();" method="post">
+        <table align="center" width=80% width="200%" cellspacing="4" cellpadding="4" border="5">
+            <tr>
+                <td colspan="2" align="center"><font size="5"><b>Manager Registration Form</b></font></td>
+                
+            </tr>
+ 
+            <tr>
+                <td align="left" valign="top" width="41%">First Name<span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" name="studentname" size="24"></td>
+            </tr>
+<tr>
+                <td align="left" valign="top" width="41%">Last Name<span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" name="intermediaryname" size="24"></td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Manager Id<span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" name="intermediarynam" size="24"></td>
+
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Username<span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" name="intermediary" size="24"></td>
+
+            </tr>
+<tr>
+                <td align="left" valign="top" width="41%">Password<span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="Password" name="intermediaryna" size="24"></td>
+
+            </tr>
+
+ <tr>
+                <td colspan="2" align="center"><font size="3"><b>Personal Details</b></font></td>
+                
+            </tr>
+<tr>
+                <td align="left" valign="top" width="41%">Mobile Number<span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="text" value="" name="mobnum" minlength="10"  maxlength="11"  onkeypress="return isNumberKey(event)" size="24"></td>
+            </tr>
+
+<tr>
+                <td align="left" valign="top" width="41%">Home Tel Number<span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="text" value="" name="homeno" minlength="10"   maxlength="11"  onkeypress="return isNumberKey(event)" size="24"></td>
+            </tr>
+
+
+            <tr>
+                <td align="left" valign="top" width="41%">Email<span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="email" value="" name="depnam" size="24"></td>
+            </tr>
+ 
+ <tr>
+                <td align="left" valign="top" width="41%">Postal Address</td>
+ 
+                <td width="57%"><input type="text"  textarea rows="4" maxlen="200" name="address" cols="20"></textarea></td>
+            </tr>
+ 
+  <tr>
+                <td colspan="2">
+                    <p align="center">
+                        Answer to the below Question??
+                        <br>
+
+             <input type="text" name="mainCaptcha" id="mainCaptcha"/>=<input type="text" id="txtInput"/> <br>
+                         
+
+                        
+            </tr>
+ 
+
+ <tr>
+                <td colspan="2">
+                    <p align="center">
+                        <input type="submit" id="Button1" value="Submit" onclick="alert(ValidCaptcha();"/>
+                        <input type="reset" value="  Reset All   " name="B5"></td>
+            </tr>
+
+           
+        </table>
+    </form>
+</body>
+ 
+</html>

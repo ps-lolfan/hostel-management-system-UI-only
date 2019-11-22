@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script type="text/javascript">
+function validate()
+{
+  var username=f1.Username.value;
+  var pass=f1.lastname.value;
+  var type=f1.UserType.value;
+  if(type=='warden')
+  {
+      
+  if(username==null || username=="" && pass==null || pass=="")
+  {
+    alert("Provide Login Credentials");
+  }
+  else if(username=="kletech" && pass=="123456")
+  {
+    
+    window.open("mobile.html"); 
+  }
+  else
+  {
+  alert("Login Unsuccessful");
+  }
+}
+   else if(type=='managers')
+   {
+        if(username==null || username=="" && pass==null || pass=="")
+  {
+    alert("Provide Login Credentials");
+  }
+  else if(username=="kletech" && pass=="123456")
+  {
+    
+    window.open("mobile2.html"); 
+  }
+  else
+  {
+  alert("Login Unsuccessful");
+  }     
+}
+else if(type=='messmanager')
+   {
+        if(username==null || username=="" && pass==null || pass=="")
+  {
+    alert("Provide Login Credentials");
+  }
+  else if(username=="kletech" && pass=="123456")
+  {
+    
+    window.open("messmanagerdashboard.html"); 
+  }
+  else
+  {
+  alert("Login Unsuccessful");
+  }     
+}
+
+   else if(type=='Students')
+{
+         if(username==null || username=="" && pass==null || pass=="")
+  {
+    alert("Provide Login Credentials");
+  }
+  else if(username=="kletech" && pass=="123456")
+  {
+    
+    window.open("mobile3.html"); 
+  }
+  else
+  {
+  alert("Login Unsuccessful");
+  }
+  }
+  
+  
+  else 
+{
+         if(username==null || username=="" && pass==null || pass=="")
+  {
+    alert("Provide Login Credentials");
+  }
+  else if(username=="kletech" && pass=="123456")
+  {
+    
+    window.open("mobile3.html"); 
+  }
+  else
+  {
+  alert("Login Unsuccessful");
+  }
+  }
+}
+</script> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+input[type=text], select {
+    width: 54%;
+    padding: 9px;
+    margin: 5px 0;
+    display:inline-block;
+    border: 0.5px solid #ccc;
+    border-radius: 5px;
+      font-color:maroon;
+    box-sizing: border-box;
+    font-size: 19px;
+}
+#fname{
+border-radius:10px;
+}
+input[type=Password], select {
+    width: 54%;
+    padding: 9px;
+    margin: 5px 0;
+    display:inline-block;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    box-sizing: border-box;
+    font-size: 19px;
+}
+
+
+
+
+
+
+
+input[type=submit] {
+    width: 39%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 9px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-family:Segoe Print;
+    font-size: 19px;
+    font-variant: bold; 
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+body {
+  
+
+  background-image: url("n.jpg");
+  
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:maroon;
+  background-size: 4px;
+}
+.topnav1 {
+  
+  background-color:lightyellow;
+  background-size:0px;
+  font-size:20px;
+  font-family: sans-serif;
+ 
+}
+
+.topnav a {
+  float: left;
+  color:gold;
+  text-align: center;
+  padding: 14px 10px;
+  text-decoration: underline;
+  font-size: 19px;
+  background-color:;
+  font-family: Verdana;
+}
+
+.topnav a:hover {
+  color:gold;
+  text-decoration: underline;
+  font-size: 19px;
+  font-family: Verdana;
+  
+}
+
+.topnav a.active {
+  
+  color: gold;
+}
+  h6 {
+    text-shadow: 0 0 3px #FF0000;
+	text-size:32px;
+
+}
+
+.mn
+{
+  font-size: 20px;
+  font-family: verdana;
+  font-color:maroon;
+  font-weight: bolder;
+}
+.img2
+{
+width: 100px;
+height: 100px;
+border-radius: 50%;
+position: absolute;
+top: -10%;
+left: calc(50% - 50px);
+} 
+
+  body{
+    background-image: url("n.jpg");
+    width:1200px;
+    height:500px;
+  }
+    .content1{
+      
+
+width: 699px;
+height: 466px;
+background: rgba(0, 0, 0, 0.5);
+color: #fff;
+top: 55%;
+left: 55%;
+position: absolute;
+transform: translate(-50%,-50%);
+box-sizing: border-box; 
+padding: 70px 30px;
+}
+
+ .t
+{
+width:37px;
+height:40px
+}
+h2{
+font-color:white;
+}
+.g{
+  height:17px;
+  font-size: 28px;
+  top:23%;
+}
+h1{
+  font-size: 43px;
+  font-family: sans-serif;
+  text-align: center;
+}
+.img1
+{
+  heigt:24px;
+}
+ 
+  </style>
+</head>
+<body>
+
+  
+   <h1><font color="green">Hostel Management System</font></h1> 
+
+
+
+
+<div class="content1">
+  <form name="f1" method="post" >
+ <a href="home.html"> <img  src="s.jpg" class="img2"> </a>
+ <center> <h2> <font size="19px">Login Here</font></h2></center><br>
+        <label  class="mn" for="user type">User Type</label>
+		<i class="fa fa-user icon"></i>
+    <select id="country" name="UserType">
+      <option value="warden">Warden</option>
+      <option value="managers">Managers</option>
+	  <option value="messmanager">Mess Manager</option>
+      <option value="students">Students</option>
+	  <option value="managers">Employees</option>
+    </select>
+<br> <br> 
+   <label class="mn" for="fname">Username</label> 
+   <i class="fa fa-envelope icon"></i>
+   <input type="text" id="fname" name="Username" placeholder="Username...">
+<br> <br>
+   <label class="mn" for="lname">Password</label> 
+    <i class="fa fa-key icon"></i>
+    <input type="Password" id="lname" name="lastname" placeholder="Password...">
+<br> <br>
+  
+ <input type="submit" id="demo" onclick="validate()" value="Sign in">&nbsp &nbsp &nbsp <b><a href="forgot.html" >Forgot Password</a></b>
+ 
+
+  </form>
+</div>
+</body>
+</html>

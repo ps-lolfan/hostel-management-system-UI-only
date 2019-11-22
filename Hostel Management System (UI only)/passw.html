@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+   function pwd() 
+   {
+var a=f1.pass.value;
+var c=f1.pass1.value;
+
+if(a==c)
+{
+  alert("You have Entered Same password, change it to new password!!!");
+}
+else
+{
+
+  alert("Change Password Successfull");
+}
+}
+
+
+</script>
+
+<style> 
+.topnav {
+  overflow: hidden;
+  background-color: gray;
+  font-size: 38px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+.topnav a{
+  float:left;
+  display:block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+input[type=text], select {
+    width: 36%;
+    padding: 4px;
+    margin: 4px 0;
+    display:inline-block;
+    border: 0.5px solid #ccc;
+    border-radius: 1px;
+      font-color:white;
+    box-sizing: border-box;
+    font-size: 29px;
+}
+.mn
+{
+  font-size: 22px;
+  font-family: sans-serif;
+  font-color:black;
+  font-variant: bold;
+  
+}
+
+
+.div2 {
+
+    
+
+    
+    
+    
+}
+fieldset { width: 60%;  height:54%;}
+input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-family:Verdana;
+    font-size: 16px;
+    font-variant: bold; 
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+body{
+    background-image: url("lof.jpg");
+  height: 100%; 
+
+    /* Center and scale the image nicely */
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+</head>
+<body><center>
+
+<form name="f1">
+    <div class="topnav">
+  <span id="name"><font color="yellow"><text align="center">Change Password</text></font></span>   <b><a href="mobile3.html">Back </a></b>
+</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+<div class="div2">
+    <section> 
+        <fieldset>
+	<legend align="center"><h1><font color="red">Change Password</font></h1></legend>
+	<h4><label class="mn" for="fname">Enter Old Password:</label>&nbsp&nbsp<input type="Password" name="pass"></h4>
+	<h4><label class="mn" for="fname">Enter New Password:</label>&nbsp<input type="Password" name="pass1"><h4>&nbsp
+    <input type="submit" name="" value="CHANGE IT" onclick="pwd()"><br>&nbsp&nbsp&nbsp&nbsp
+    <a style="font-size: 15px; color: black;" href="mobile3.html"><b>BACK</b></a>
+</center>
+</fieldset>
+</section>
+</div>
+</form>
+</body>
+</html>

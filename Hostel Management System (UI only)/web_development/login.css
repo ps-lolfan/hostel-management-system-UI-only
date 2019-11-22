@@ -1,0 +1,36 @@
+.major{
+    background-image:url("login.jpg");width:500px;height:500px;
+}
+.minor{
+font:italic small-caps  bold 52px  Segoe Print;
+color:gold;
+margin-left:100px;
+font-size:49;text-decoration:underline;
+}
+.saj{
+font-family:Georgia;
+color:red;
+font-size=42;
+font-weight:bold;}
+
+.kas{
+font:italic small-caps  bold 36px  segoe print;
+color:orange;
+font-weight:bold;text-decoration:underline;}
+
+.as{
+font:small-caps  bold 27px  times new roman;
+color:olive;font-weight:bold;}
+.but{
+color:green;}
+#menu{
+	background-color:gold;
+
+	padding:5px;
+}
+.sh{
+font-family:segoe print;
+font-size=26;
+font-weight:bold;
+}
+

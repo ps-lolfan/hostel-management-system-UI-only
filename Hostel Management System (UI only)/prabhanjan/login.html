@@ -1,0 +1,97 @@
+<html>
+<head>
+<script>
+function u_name()
+{
+	var uname1= f1.uname.value;
+	var check= /^[a-zA-Z]{3,}$/;
+	if (check.test(uname1))
+	{
+	}
+	else
+	{
+		alert("invalid username");
+		f1.uname.focus();
+	}
+}
+function pwdvalid()
+{
+	var pwd1= f1.pwd.value;
+if (pwd1.length >=6)
+	{
+	}
+	else
+	{
+		alert("password should at least 6 character");
+		f1.pwd.focus();
+	}
+
+}
+function redirect()
+{
+	document.location="new.html";
+return;
+
+}
+function Captcha(){
+                     var alpha = new Array("What is addition of 8+5","red rose color is","months in a year? ");
+                     
+                    
+                  
+
+                     {
+                       var a = alpha[Math.floor(Math.random() * alpha.length)];
+                      
+
+                      }
+                    var code = a;
+                    document.getElementById("mainCaptcha").value = code
+                  }
+                  function ValidCaptcha(){
+                      var string1 = document.getElementById('mainCaptcha').value;
+                      var string2 = removeSpaces(document.getElementById('txtInput').value);
+                     
+                      if ((string1 =="What is addition of 8+5"  && string2==13) || (string1=="red rose color is" && string2=="red") || (string1=="months in a year? " && string2==12))
+
+                        alert(" successsful");
+                     else     
+                        alert("wronganswer");
+                      
+                  }
+                  function removeSpaces(string){
+                    return string.split(' ').join('');
+                  }
+</script>
+<title>login form</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body onload="Captcha();"><br>
+<h3>KLE's TECHNOLOGICAL UNIVERSITY,HUBLI.</h3>
+<div class="loginbox">
+<img src="img1.png" class="img2"><br>
+<h1>Login Here
+</h1>
+<form>
+
+
+<p>username :<br>
+<input type="text" name="uname" max="15"  placeholder="enter username" required></p>&nbsp&nbsp<br>
+<p>password :<br>
+ <input type="password" name="pwd" max="15" onfocus="u_name()" placeholder="enter password" required ><br><br>
+
+
+<input type="text" name="mainCaptcha" id="mainCaptcha"/>
+<input type="text" id="txtInput"/>    
+ <input id="Button1" type="button" value="Check" onclick="alert(ValidCaptcha());"/>
+ <input type="submit" name="" value="Sign in">&nbsp&nbsp&nbsp&nbsp
+<input type="submit" class="b" name="" value="Sign up" onclick="redirect()"></p>
+<h4 align="light"><a href="forgetpwd.html">forget password</a></h4><br>
+
+
+</form>
+</div>
+
+</body>
+
+
+</head>
+</html>

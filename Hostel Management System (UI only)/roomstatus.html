@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DASHBOARD</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          
+<script>
+  function sub()
+  {
+    alert("Suceessfully room is alloted");
+  }
+</script>
+
+<style>
+input.hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+#profile-image1 {
+    cursor: pointer;
+  
+     width: 100px;
+    height: 100px;
+  border:2px solid #03b1ce ;}
+  .tital{ font-size:16px; font-weight:500;}
+   .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0}  
+input[type=submit] {
+    width: 9%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px;
+    margin: 2px 0;
+    border: none;
+  
+    cursor: pointer;
+    font-family:Verdana;
+    font-size: 15px;
+    font-variant: bold; 
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+input[type=text], select {
+    width: 30%;
+    padding: 4px;
+    margin: 4px 0;
+    display:inline-block;
+    border: 0.5px solid #ccc;
+    border-radius: 1px;
+      font-color:white;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.mn
+{
+  font-size: 10px;
+  font-family: Verdana;
+  font-color:white;
+  
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: gray;
+  color:black;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  left:0.03%;
+}
+
+
+
+.floor{
+  background-color:#DAF7A6;
+  color:black;
+  position: absolute;
+  top: 19%;
+  width: 96%;
+  height: 8%;
+  
+  left:4%;
+  font-family: Times new roman;
+  font-weight: ;
+  font-size: 16.6px;
+  text-decoration-color: white;
+  text-align:left;
+
+}
+.floor1{
+  
+  background-color:#DAF7A6;
+  color:black;
+  position: absolute;
+  top: 72%;
+  width: 96%;
+  height: 8%;
+  
+  left:4%;
+  font-family: Times new roman;
+  font-weight: ;
+  font-size: 16.6px;
+  text-decoration-color: white;
+  text-align:left;
+
+}
+.floor2{
+  
+  background-color: #DAF7A6;
+  font-color:black;
+  position: absolute;
+  top: 125%;
+  width: 96%;
+  height: 8%;
+  
+  left:4%;
+  font-family: Times new roman;
+  font-weight: ;
+  font-size: 16.6px;
+  text-decoration-color: white;
+  text-align:left;
+
+}
+.fllr{
+  
+  background-color:grey;
+  color:black;
+  position: absolute;
+  top: 188%;
+  width: 96%;
+  height: 8%;
+  
+  left:1%;
+  font-family: Times new roman;
+  font-weight: ;
+  font-size: 16.6px;
+  text-decoration-color: white;
+  text-align:left;
+
+}
+
+.h1
+{
+  
+  background-color:white;
+  color:black;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 10%;
+  
+  left:9%;
+  font-family: Times new roman;
+  font-weight: ;
+  font-size: 18px;
+  text-decoration-color: white;
+  text-align:left;
+
+}
+.fa {
+  padding: 20px;
+
+
+  font-size: 30px;
+  width: 29px;
+  text-align: center;
+  text-decoration: none;
+  margin: 7px 4px;
+  height:30px;
+}
+
+.fa:hover {
+    
+}
+.fa-face:link {
+    color: green;
+}
+
+/* visited link */
+.fa-twit:visited {
+    color: green;
+}
+
+/* mouse over link */
+.fa:hover {
+    color: red;
+}
+
+/* selected link */
+.fa:active {
+    color: yellow;
+} 
+
+
+.fa-face {
+  background: red;
+  color: red;
+}
+
+.fa-twit {
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-g {
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-l {
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-y{
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-i {
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-p {
+  background:#f2f2f2;
+  color:#f2f2f2;
+}
+
+.fa-sn {
+  background: #f2f2f2;
+  color: #f2f2f2;
+  
+}
+
+.fa-sk{
+  background:#f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-an {
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-dr{
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-vi{
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-tu{
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-vin {
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-four {
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-stum{
+  background:#f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-fli {
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-yah{
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-soundcloud {
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-red {
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-rs {
+  background: #f2f2f2;
+  color: #f2f2f2;
+}
+.radio-inline{
+  color:black;
+  font-weight: bolder;
+
+}
+
+
+#name{
+  font-size: 40px;
+}
+#ecm{
+  font-size: 100px;
+  word-spacing: 1.5;
+  text-align: center;
+}
+
+.topnav a{
+  float:left;
+  display:block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: lightgrey;
+  color: black;
+}
+#search{
+  margin-top: 30px;
+  height: 27px;
+  border:none;
+  font-family: Verdana;
+  font-size: 14px;
+  color:black;
+  margin-left: 50px;
+}
+
+#search-btn{
+  border:none;
+  width: 60px;
+  height: 30px;background-color: forestgreen;
+  font-size: 14px;
+
+}
+
+/* Style the side navigation */
+.sidenav {
+  top:9%;
+    height: 150%;
+    width: 255px;
+    position:absolute;
+    z-index: 1;
+    left: 2;
+    background-color: aqua;
+    overflow-x: hidden;
+   
+}
+
+
+/* Side navigation links */
+.sidenav a {
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: Verdana;
+}
+
+/* Change color on hover */
+.sidenav a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the content */
+.content1 {
+     margin-left: 255px;
+    padding-left: 10px;
+    margin-top: 2px;
+    background-color:white;
+   
+
+    
+}
+
+
+
+.item{
+  border:2px solid black;
+  width: 300px;
+  float: left;
+  margin: 30px;
+}
+.item h1{
+  text-align: center;
+}
+.view-item{
+  background-color: green;
+  margin-left: 35%;
+  padding: 5px;
+  text-decoration:none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  border:1px solid black;
+}
+
+.priceinfo li{
+  list-style-type: none;
+  line-height: 2.5;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+.itemdisc{
+  margin-top: 50px;
+  float: left;
+  margin-left: 30px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+
+.buybtn{
+  background-color: #46F34B;
+  padding: 10px;
+  color: white;
+  text-decoration-line: none;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+.buybtn:hover{
+  background-color:green; 
+}
+.cartbtn{
+  background-color: #F9C940;
+  padding: 10px;
+  color: white;
+  text-decoration-line: none;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+.cartbtn:hover{
+  background-color:#F79209; 
+}
+
+#catg p{
+  
+  color: black;
+  font-size: 17px;
+  font-family: Verdana;
+  text-align: center;
+}
+#catg input{
+
+  margin-top: 0;
+  border-width: 18px;
+  margin-left: 0;
+}
+
+/* special effects span tag in item disc */
+#splchar{
+  color: blue;
+}
+
+.view-item_book{
+  margin-left: 15px;
+  background-color: green;
+  padding: 10px;
+  color: white;
+  text-decoration-line: none;
+  margin:10px;
+}
+
+#Reviews{
+  margin-top: 10px;
+  margin:30px;
+  line-height: 1;
+  font-size: 18px;
+
+}
+.img{
+   margin-top: 40px;
+   margin-left: 159px;
+   top:40%;
+
+}
+
+.b{
+margin-top: 2px;
+   margin-left: 354px;
+   top:2%;
+   margin-bottom: 1px;
+}
+.ta{
+  margin-top: 10px;
+   margin-left: 354px;
+   top:10%;
+  
+}
+
+.mn
+{
+  font-size: 30px;
+  font-family: sans-serif;
+  font-color:blue;
+  
+}
+
+
+
+
+
+
+
+.fa-face1:link {
+    color: green;
+}
+
+/* visited link */
+.fa-twit1:visited {
+    color: green;
+}
+
+/* mouse over link */
+.fa:hover {
+    color: red;
+}
+
+/* selected link */
+.fa:active {
+    color: yellow;
+} 
+
+
+.fa-face1 {
+  background: red;
+  color: red;
+}
+
+.fa-twit1 {
+  background: red;
+  color: red;
+}
+
+.fa-g1 {
+  background: red;
+  color: red;
+}
+
+.fa-l1 {
+  background: red;
+  color:red;
+}
+
+.fa-y1{
+  background: red;
+  color: red;
+}
+
+.fa-i1 {
+  background: red;
+  color: red;
+}
+
+.fa-p1 {
+  background:red;
+  color:red;
+}
+
+.fa-sn1 {
+  background: red;
+  color: red;
+  
+}
+
+.fa-sk1{
+  background:red;
+  color: red;
+}
+
+.fa-an1 {
+  background: red;
+  color: red;
+}
+
+.fa-dr1{
+  background: red;
+  color: red;
+}
+
+.fa-vi1{
+  background:red;
+  color: red;
+}
+
+.fa-tu1{
+  background: red;
+  color: red;
+}
+
+.fa-vin1 {
+  background: red;
+  color: red;
+}
+
+.fa-four1 {
+  background: red;
+  color: red;
+}
+
+.fa-stum1{
+  background:#f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-fli1{
+  background: red;
+  color: red;
+}
+
+.fa-yah1{
+  background: red;
+  color: red;
+}
+
+.fa-soundcloud1 {
+  background: red;
+  color: red;
+}
+
+.fa-red1 {
+  background: red;
+  color: red;
+}
+
+.fa-rs1 {
+  background:red;
+  color: red;
+}
+.fa-face1 {
+  background: red;
+  color: red;
+}
+
+.fa-twit1 {
+  background: red;
+  color: red;
+}
+
+.fa-g1 {
+  background: red;
+  color: red;
+}
+
+.fa-l1 {
+  background: red;
+  color:red;
+}
+
+.fa-y1{
+  background: red;
+  color: red;
+}
+
+.fa-i1 {
+  background: red;
+  color: red;
+}
+
+.fa-p1 {
+  background:red;
+  color:red;
+}
+
+.fa-sn1 {
+  background: red;
+  color: red;
+  
+}
+
+.fa-sk1{
+  background:red;
+  color: red;
+}
+
+.fa-an1 {
+  background: red;
+  color: red;
+}
+
+.fa-dr1{
+  background: red;
+  color: red;
+}
+
+.fa-vi1{
+  background:red;
+  color: red;
+}
+
+.fa-tu1{
+  background: red;
+  color: red;
+}
+
+.fa-vin1 {
+  background: red;
+  color: red;
+}
+
+.fa-four1 {
+  background: red;
+  color: red;
+}
+
+.fa-stum1{
+  background:#f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-fli1{
+  background: red;
+  color: red;
+}
+
+.fa-yah1{
+  background: red;
+  color: red;
+}
+
+.fa-soundcloud1 {
+  background: red;
+  color: red;
+}
+
+.fa-red1 {
+  background: red;
+  color: red;
+}
+
+.fa-rs1 {
+  background:red;
+  color: red;
+}
+
+
+
+
+
+
+.fa-face2 {
+  background: green;
+  color: green
+}
+
+.fa-twit2 {
+  background: green;
+  color: green;
+}
+
+.fa-g2 {
+  background: green;
+  color: green;
+}
+
+.fa-l2 {
+  background: green;
+  color:red;
+}
+
+.fa-y2{
+  background: green
+  color: green;
+}
+
+.fa-i2 {
+  background: green;
+  color: green;
+}
+
+.fa-p2{
+  background:green;
+  color:green;
+}
+
+.fa-sn2 {
+  background: green;
+  color: green;
+  
+}
+
+.fa-sk2{
+  background:green;
+  color: green;
+}
+
+.fa-an2 {
+  background: green;
+  color: green;
+}
+
+.fa-dr2{
+  background: green;
+  color: green;
+}
+
+.fa-vi2{
+  background:green;
+  color: green;
+}
+
+.fa-tu2{
+  background: green;
+  color: green;
+}
+
+.fa-vin2 {
+  background: green;
+  color: green;
+}
+
+.fa-four2 {
+  background: green;
+  color: red;
+}
+
+.fa-stum2{
+  background:#f2f2f2;
+  color: #f2f2f2;
+}
+
+.fa-fli2{
+  background: green;
+  color: green;
+}
+
+.fa-yah2{
+  background: green;
+  color:green;
+}
+
+.fa-soundcloud2 {
+  background: green;
+  color: green;
+}
+
+.fa-red2{
+  background: green;
+  color: green;
+}
+
+.fa-rs2 {
+  background:green;
+  color:green;
+}
+
+
+</style>
+</head>
+<body>
+  
+
+
+
+ 
+    
+
+
+
+    
+ 
+
+
+<div class="topnav">
+  <span id="name"><font color="yellow"><text align="center">Room Status And Allocation</text></font></span><a href="mobile2.html"><b>BACK</b></a>
+</div>
+<br>
+<br>
+
+
+     
+<body>
+    <form name="emp" action=""  method="post">
+      <div class="content1">
+          <br><br>
+          <br>
+            
+        
+            
+            <div class="h1">
+          
+<img src="al.png">  Booked   &nbsp &nbsp &nbsp <img src="all.png">  Available &nbsp &nbsp &nbsp <img src="alll.png">  Selected
+      </div>
+        
+       <div class="floor">
+       <h3>&nbsp &nbsp 1st Floor</h3>
+      <a href="#" class="fa fa-face"><label class="radio-inline">
+ <input type='radio' name='valw' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 101
+ </label> </a>
+<a href="#" class="fa fa-twit"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 102
+    </label></a>
+<a href="#" class="fa fa-g"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 103
+    </label></a>
+<a href="#" class="fa fa-l"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 104
+    </label></a>
+<a href="#" class="fa fa-y"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 105
+    </label></a>
+<a href="#" class="fa fa-i"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 106</label></a>
+<a href="#" class="fa fa-p"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 107</label></a>
+<a href="#" class="fa fa-sn"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 108</label></a>
+<a href="#" class="fa fa-sk"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 109</label></a>
+<a href="#" class="fa fa-an"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 110</label></a>
+<a href="#" class="fa fa-dr"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 111</label></a>
+<a href="#" class="fa fa-vi"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 112</label></a>
+<a href="#" class="fa fa-tu"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 113</label></a>
+<a href="#" class="fa fa-vin"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 114</label></a>
+<a href="#" class="fa fa-four"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 115</label></a>
+<a href="#" class="fa fa-stum"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 116</label></a>
+<a href="#" class="fa fa-fli"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 117</label></a>
+<a href="#" class="fa fa-yah"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 118</label></a>
+<a href="#" class="fa fa-red"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 119</label></a>
+<a href="#" class="fa fa-rs"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 120</label></a>
+      <a href="#" class="fa fa-rs"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 121</label></a>
+      <a href="#" class="fa fa-rs"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 122</label></a>
+      <a href="#" class="fa fa-rs"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 123</label></a>
+      
+    </div>
+      <br>
+      <br>
+          
+
+        &nbsp&nbsp&nbsp<div class="floor1">
+      <h3>&nbsp &nbsp 2nd Floor</h3>
+      <a href="#" class="fa fa-face1"><label class="radio-inline">
+ <input type='radio' name='val2' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 123
+  </label>  </a>
+<a href="#" class="fa fa-twit1"><label class="radio-inline">
+      <input type='radio' name='val3' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 124
+    </label></a>
+<a href="#" class="fa fa-g1"><label class="radio-inline">
+      <input type='radio' name='val4' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 124
+    </label></a>
+<a href="#" class="fa fa-l1"><label class="radio-inline">
+      <input type='radio' name='val5' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 126
+    </label></a>
+<a href="#" class="fa fa-y1"><label class="radio-inline">
+      <input type='radio' name='val6' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 127
+    </label></a>
+<a href="#" class="fa fa-i1"><label class="radio-inline">
+      <input type='radio' name='val7' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 128</label></a>
+<a href="#" class="fa fa-p1"><label class="radio-inline">
+      <input type='radio' name='val8' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 129</label></a>
+<a href="#" class="fa fa-sn1"><label class="radio-inline">
+      <input type='radio' name='val9' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 130</label></a>
+<a href="#" class="fa fa-sk1"><label class="radio-inline">
+      <input type='radio' name='val10' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 131</label></a>
+<a href="#" class="fa fa-an1"><label class="radio-inline">
+      <input type='radio' name='val11' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 132</label></a>
+<a href="#" class="fa fa-dr1"><label class="radio-inline">
+      <input type='radio' name='val13' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 133</label></a>
+<a href="#" class="fa fa-vi1"><label class="radio-inline">
+      <input type='radio' name='val14' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 134</label></a>
+<a href="#" class="fa fa-tu1"><label class="radio-inline">
+      <input type='radio' name='val15' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 135</label></a>
+<a href="#" class="fa fa-vin1"><label class="radio-inline">
+      <input type='radio' name='val16' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 136</label></a>
+<a href="#" class="fa fa-four1"><label class="radio-inline">
+      <input type='radio' name='val17' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 137</label></a>
+<a href="#" class="fa fa-stum1"><label class="radio-inline">
+      <input type='radio' name='val18' value='Accepted' /> &nbsp 138</label></a>
+<a href="#" class="fa fa-fli1"><label class="radio-inline">
+    <input type='radio' name='val19' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 139</label></a>
+<a href="#" class="fa fa-yah1"><label class="radio-inline">
+      <input type='radio' name='val20' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 140</label></a>
+<a href="#" class="fa fa-red1"><label class="radio-inline">
+      <input type='radio' name='val21' value='Accepted' checked="checked" readonly="readonly"> &nbsp 141</label></a>
+<a href="#" class="fa fa-rs1"><label class="radio-inline">
+      <input type='radio' name='val22' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 142</label></a>
+      <a href="#" class="fa fa-rs1"><label class="radio-inline">
+      <input type='radio' name='val23' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 143</label></a>
+      <a href="#" class="fa fa-rs1"><label class="radio-inline">
+    <input type='radio' name='val24' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 144</label></a>
+      <a href="#" class="fa fa-rs1"><label class="radio-inline">
+      <input type='radio' name='val25' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 145</label></a>
+      
+    </div>
+        
+     <br>
+     <br>
+     <br>
+     <br>
+     <div class="floor2">
+
+<h3>&nbsp &nbsp 3rd Floor</h3>
+      <a href="#" class="fa fa-face2"><label class="radio-inline">
+ <input type='radio' name='val1' value='Accepted' checked="checked" readonly="readonly"/> &nbsp 146
+  </label>  </a>
+<a href="#" class="fa fa-twit2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 147
+    </label></a>
+<a href="#" class="fa fa-g2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 148
+    </label></a>
+<a href="#" class="fa fa-l2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 149
+    </label></a>
+<a href="#" class="fa fa-y2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 150
+    </label></a>
+<a href="#" class="fa fa-i2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 151</label></a>
+<a href="#" class="fa fa-p2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 152</label></a>
+<a href="#" class="fa fa-sn2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 153</label></a>
+<a href="#" class="fa fa-sk2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 154</label></a>
+<a href="#" class="fa fa-an2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 155</label></a>
+<a href="#" class="fa fa-dr2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 156</label></a>
+<a href="#" class="fa fa-vi2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 157</label></a>
+<a href="#" class="fa fa-tu2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 158</label></a>
+<a href="#" class="fa fa-vin2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 159</label></a>
+<a href="#" class="fa fa-four2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 160</label></a>
+<a href="#" class="fa fa-stum2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 161</label></a>
+<a href="#" class="fa fa-fli2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 162</label></a>
+<a href="#" class="fa fa-yah2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 163</label></a>
+<a href="#" class="fa fa-red2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 164</label></a>
+<a href="#" class="fa fa-rs2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 165</label></a>
+      <a href="#" class="fa fa-rs2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 166</label></a>
+      <a href="#" class="fa fa-rs2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 167</label></a>
+      <a href="#" class="fa fa-rs2"><label class="radio-inline">
+      <input type="radio" name="optradio"> &nbsp 168</label></a>
+
+
+
+
+     </div>              
+              
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="fllr">
+  <h2><center><font color="yellow"><b>-----Details of Student-----</b></font></center> </h2>
+<table align="center" width=20%  cellspacing="2" cellpadding="2" border="5">
+             <tr>
+                <td align="left" valign="top" ><label class="mn" for="fname">Student Name(Full Name)</label> <span style="color:red">*</span></td>
+ 
+                <td align="left" width="50%"><input type="text" value="" name="studentname" size="24" placeholder="Suresh.R.biradar"></td>
+            </tr>
+<tr>
+                <td ><label class="mn" for="fname">Student ID </label><span style="color:red">*</span></td>
+ 
+                <td ><input type="text" value="" onfocus="fname()" name="intermediaryname" size="24" placeholder="std102..."> </td>
+            </tr>
+           
+<tr>
+                <td ><label class="mn" for="fname">Register Number</label><span style="color:red">*</span></td>
+ 
+                <td ><input type="text" value="" onfocus="fname()" name="intermediaryname" size="24" placeholder="01fm17mca022..."> </td>
+</tr>
+<tr>
+                <td align="left" valign="top" ><label class="mn" for="fname">Course</label><span style="color:red">*</span></td>
+ 
+                <td ><input type="text" value="" onfocus="fname()" name="intermediaryname" size="24" placeholder="BE..."> </td>
+
+</tr>
+<tr>
+                <td align="left" valign="top" ><label class="mn" for="fname">Branch</label><span style="color:red">*</span></td>
+ 
+                <td ><input type="text" value="" onfocus="fname()" name="intermediaryname" size="24" placeholder="Mechanical..."> </td>
+
+</tr>
+<tr>
+                <td align="left" valign="top" ><label class="mn" for="fname">Semester</label><span style="color:red">*</span></td>      
+ 
+                <td ><input type="text" value="" onfocus="fname()" name="intermediaryname" size="24" placeholder="2nd Semester..."> </td>
+</tr>
+
+
+            <tr>
+                <td align="left" valign="top" ><label class="mn" for="fname"> Date</label><span style="color:red">*</span></td>
+ 
+                <td ><input type="Date" value=""  name="intermediaryname" size="24"> </td>
+            </tr>
+           
+            <tr>
+                <td colspan="2">
+                    <p align="center">
+        <input  type="submit" value="Allocated"  onclick="sub()" />
+        &nbsp &nbsp &nbsp &nbsp 
+                
+&nbsp &nbsp
+                <a href="mobile2.html"><input type="submit" value="Back"> </a></td>
+                &nbsp &nbsp
+            </tr>
+          </table>  
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </form>
+
+</body>
+</html>

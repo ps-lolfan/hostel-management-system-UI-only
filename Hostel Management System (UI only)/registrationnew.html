@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Registration</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+input[type=submit] {
+    width: 12%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-family:Verdana;
+    font-size: 16px;
+    font-variant: bold; 
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+input[type=text], select {
+    width: 18%;
+    padding: 7px;
+    margin: 5px 0;
+    display:inline-block;
+    border: 0.5px solid #ccc;
+    border-radius: 5px;
+      font-color:white;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.mn
+{
+  font-size: 19px;
+  font-family: sans-serif;
+  font-color:white;
+  
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: gray;
+  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+#name{
+  font-size: 40px;
+}
+#ecm{
+  font-size: 100px;
+  word-spacing: 1.5;
+  text-align: center;
+}
+
+.topnav a{
+  float:left;
+  display:block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#search{
+  margin-top: 30px;
+  height: 27px;
+  border:none;
+  font-family: Verdana;
+  font-size: 14px;
+  color:black;
+  margin-left: 50px;
+}
+
+#search-btn{
+  border:none;
+  width: 60px;
+  height: 30px;background-color: forestgreen;
+  font-size: 14px;
+
+}
+
+/* Style the side navigation */
+.sidenav {
+  top:9%;
+    height: 150%;
+    width: 249px;
+    position:absolute;
+    z-index: 1;
+    left: 2;
+    background-color: lightyellow;
+    overflow-x: hidden;
+   
+}
+
+
+/* Side navigation links */
+.sidenav a {
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: Verdana;
+}
+
+/* Change color on hover */
+.sidenav a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the content */
+.content1 {
+     margin-left: 1000px;
+    padding-left: 10px;
+    margin-top: 2px;
+    background-color:white;
+   
+
+    
+}
+
+
+
+.item{
+  border:2px solid black;
+  width: 300px;
+  float: left;
+  margin: 30px;
+}
+.item h1{
+  text-align: center;
+}
+.view-item{
+  background-color: green;
+  margin-left: 35%;
+  padding: 5px;
+  text-decoration:none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  border:1px solid black;
+}
+
+.priceinfo li{
+  list-style-type: none;
+  line-height: 2.5;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+.itemdisc{
+  margin-top: 50px;
+  float: left;
+  margin-left: 30px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+
+.buybtn{
+  background-color: #46F34B;
+  padding: 10px;
+  color: white;
+  text-decoration-line: none;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+.buybtn:hover{
+  background-color:green; 
+}
+.cartbtn{
+  background-color: #F9C940;
+  padding: 10px;
+  color: white;
+  text-decoration-line: none;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+.cartbtn:hover{
+  background-color:#F79209; 
+}
+
+#catg p{
+  
+  color: black;
+  font-size: 17px;
+  font-family: Verdana;
+  text-align: center;
+}
+#catg input{
+
+  margin-top: 0;
+  border-width: 18px;
+  margin-left: 0;
+}
+
+/* special effects span tag in item disc */
+#splchar{
+  color: blue;
+}
+
+.view-item_book{
+  margin-left: 15px;
+  background-color: green;
+  padding: 10px;
+  color: white;
+  text-decoration-line: none;
+  margin:10px;
+}
+
+#Reviews{
+  margin-top: 10px;
+  margin:30px;
+  line-height: 1;
+  font-size: 18px;
+
+}
+#dvPreview
+{
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+    min-height: 20px;
+    min-width: 20px;
+    display: none;
+}
+
+body
+{
+	background-color: #D6DBDF;
+}
+
+fieldset { width: 70%; }
+
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+  <script>
+  document.getElementById("p1").innerHTML = Date();
+
+    var currentDate = new Date();
+
+    
+</script>
+<script>
+$(function () {
+    $("#fileupload").change(function () {
+        $("#dvPreview").html("");
+        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+        if (regex.test($(this).val().toLowerCase())) {
+            if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+                $("#dvPreview").show();
+                $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
+            }
+            else {
+                if (typeof (FileReader) != "undefined") {
+                    $("#dvPreview").show();
+                    $("#dvPreview").append("<img />");
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#dvPreview img").attr("src", e.target.result);
+                    }
+                    reader.readAsDataURL($(this)[0].files[0]);
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            }
+        } else {
+            alert("Please upload a valid image file.");
+        }
+    });
+});
+</script>
+
+</head>
+<body>
+	<div class="topnav">
+  <span id="name"><font color="yellow"><text align="center">Student Registration</text></font></span>   <b><a href="mobile2.html">Back </a></b>
+</div>
+<br>
+<br>
+<br>
+<div class="content1">
+<section><fieldset><legend align="center">Profile Photo</legend><input id="fileupload" type="file" />
+            
+<br />
+<br />
+<div id="dvPreview">
+</div>
+
+</fieldset></section></div>
+<div class="o">
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  <label class="mn" for="fname">Date</label><span style="color:red">*</span> 
+  <input type="date" name="d">  &nbsp &nbsp &nbsp<label class="mn" for="fname">Time</label><span style="color:red">*</span> 
+  <input type="time" name="d">
+</div>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<label class="mn" for="fname">Student ID</label><span style="color:red">*</span>
+
+	<input type="text" name="id"> 
+  <br>&nbsp &nbsp &nbsp &nbsp
+<br> 
+  <label class="mn" for="fname">Student Receipt No</label><span style="color:red">*</span>
+   &nbsp &nbsp &nbsp &nbsp <input type="text" name="res" placeholder="Admission Number"> &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp
+   
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+<section>
+
+<form name="payment">
+ <left>
+  <hr><hr>
+<fieldset>
+ <legend align="center"><h1>Room Details</h1></legend>
+ <ol>
+                  <li>  <label  class="mn" for="fname"> Room No</label><span style="color:red">*</span>
+                   &nbsp &nbsp &nbsp &nbsp <input type="text"  size="30" placeholder="Room number" required autofocus/>
+                   <br><br> </li>&nbsp &nbsp
+          <li>   <label class="mn" for="fname"> Floor No</label><span style="color:red">*</span>
+
+             &nbsp &nbsp &nbsp &nbsp &nbsp<select name="Floor" placeholder="Floor" required autofocus/>
+   <option>1st Floor</option>
+<option>2nd Floor</option>
+<option>3rd Floor</option>
+</select></li>  &nbsp &nbsp &nbsp&nbsp&nbsp
+<li><label class="mn" for="fname">Room Type</label><span style="color:red">*</span>
+ &nbsp &nbsp <select name="Type" placeholder="Type"  width="13" required autofocus/>
+   <option>Single Sharing(Attached Bathroom)</option>
+<option>Single Sharing(Non-Attached Bathroom)</option>
+<option>Double Sharing(Attached Bathroom)</option>
+<option>Double Sharing(Non-Attached Bathroom)</option>
+<option>Triple Sharing(Attached Bathroom)</option>
+<option>Triple Sharing(Non-Attached Bathroom)</option>
+</select></li>
+</ol>
+</fieldset></section>
+</left>
+<br>
+<br>
+<br>
+<hr><hr>
+<section>
+
+<form name="payment">
+ 
+<fieldset>
+ <legend align="center"><h1>Student Details</h1></legend>
+ <ol>
+             <li>  &nbsp &nbsp &nbsp<label  class="mn" for="fname">Student Name</label><span style="color:red">*</span>
+                  &nbsp &nbsp &nbsp  <input type="text"  size="30" placeholder="Student Name" required autofocus/></li>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp&nbsp 
+<br>
+            <li>&nbsp &nbsp &nbsp <label class="mn" for="fname"> Birth Date</label><span style="color:red">*</span>
+              &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="date"  size="30" placeholder="date" required autofocus/></li>
+                    <br>
+<br>
+             <li>  &nbsp<label  class="mn" for="fname">Diseases(if any)</label><span style="color:red">*</span>
+                    &nbsp &nbsp &nbsp <input type="text"  size="30" placeholder="Disease Name" required autofocus/></li>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+<br>
+                   <li>  &nbsp &nbsp<label class="mn" for="fname"> Blood Group</label><span style="color:red">*</span>
+
+            &nbsp &nbsp &nbsp &nbsp &nbsp <select name="Blood" placeholder="Blood Group" required autofocus/>
+   <option>A+</option>
+<option>B+</option>
+<option>O+</option>
+<option>AB+</option>
+<option>A-</option>
+<option>B-</option>
+<option>O-</option>
+<option>AB-</option>
+</select> </li><br>
+<br>
+ <li> &nbsp &nbsp<label  class="mn" for="fname">College Name</label><span style="color:red">*</span>
+                   &nbsp &nbsp &nbsp <input type="text"  size="30" placeholder="College Name" required autofocus/></li>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp
+<br>
+
+<li> &nbsp &nbsp<label  class="mn" for="fname">College Address</label><span style="color:red">*</span>
+                  &nbsp  <textarea></textarea></li>
+                    <br>
+<li> &nbsp &nbsp<label  class="mn" for="fname">Branch</label><span style="color:red">*</span>
+                   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  <input type="text"  size="30" placeholder="Branch Name" required autofocus/></li>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp
+
+ <br>
+<li><label  class="mn" for="fname">Which Semester?</label><span style="color:red">*</span>
+                    <select name="Semester" placeholder="Semester" required autofocus/>
+   <option>1st</option>
+<option>2nd</option>
+<option>3rd</option>
+<option>4th</option>
+<option>5th</option>
+<option>6th</option>
+<option>7th</option>
+<option>8th</option>
+</select></li> <br><br>
+ </ol>
+</fieldset></section>
+<br><br><br>
+<hr><hr>
+<section>
+
+<form name="payment">
+ 
+<fieldset>
+ <legend align="center"><h1>Guardian Information</h1></legend>
+ <ol>
+   <li> &nbsp &nbsp &nbsp<label  class="mn" for="fname">Guardian Full Name</label><span style="color:red">*</span>
+                   &nbsp &nbsp &nbsp <input type="text"  size="30" placeholder="Guardian Name" required autofocus/></li>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+
+<li>&nbsp<label  class="mn" for="fname">Relation Type to Student</label><span style="color:red">*</span>
+                   <select name="Relation" placeholder="Relation" required autofocus/>
+   <option>Father</option>
+<option>Mother</option>
+<option>Others</option></select></li><br>
+
+  <li> &nbsp &nbsp &nbsp<label  class="mn" for="fname">Occupation</label><span style="color:red">*</span>
+                   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp <input type="text"  size="30" placeholder="Occupation" required autofocus/></li>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   &nbsp &nbsp&nbsp &nbsp    
+<br>
+
+   <li>&nbsp &nbsp &nbsp <label  class="mn" for="fname">City</label><span style="color:red">*</span>
+                  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp  <input type="text"  size="30" placeholder="City" required autofocus/></li>
+                    <br>
+                  </ol>
+</fieldset></section>
+<br><br><br>
+<hr><hr>
+<section>
+
+<form name="payment">
+ 
+<fieldset>
+       <legend align="center"><h1>Contact Information</h1></legend>
+       <ol>
+        <li>
+   &nbsp &nbsp &nbsp<label  class="mn" for="fname">Phone Number</label><span style="color:red">*</span>
+                  &nbsp &nbsp &nbsp  <input type="number"  size="30" placeholder="Number" required autofocus/></li>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <br>
+                   <li>  &nbsp &nbsp &nbsp<label  class="mn" for="fname">Mobile Number</label><span style="color:red">*</span>
+                  &nbsp &nbsp &nbsp  <input type="text"  size="30" placeholder="Mobile No." required autofocus/></li>
+                    <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<br>
+                   <li>  &nbsp &nbsp &nbsp<label  class="mn" for="fname">Email ID</label><span style="color:red">*</span>
+                  &nbsp &nbsp &nbsp   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="email"  size="30" placeholder="Email ID" required autofocus/></li>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+</ol>
+</fieldset></section>
+<br><br><br>
+<right><a style="font-size:17px; float:right; color:white;" href="#top"><img src="asa.png"></a></right>
+</form>
+</body>
+</html>

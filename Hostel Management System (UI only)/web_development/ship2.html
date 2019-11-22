@@ -1,0 +1,157 @@
+<html>
+<head>
+
+<script>
+
+
+
+
+function firstname()
+{
+var fn=f1.fname.value;
+var check=/^[a-z A-Z]+$/;
+if(check.test(fn))
+{
+}
+else
+{
+alert("Invalid first name");
+f1.fname.focus();
+}
+}
+</script>
+<script>
+
+function middlename()
+{
+var fn=f1.lname.value;
+var check=/^[a-z A-Z]+$/;
+if(check.test(fn))
+{
+}
+else
+{
+alert("Invalid middle name");
+f1.lname.focus();
+}
+}
+</script>
+<script>
+function last()
+{
+var fn=f1.lname1.value;
+var check=/^[a-z A-Z]+$/;
+if(check.test(fn))
+{
+}
+else
+{
+alert("Invalid last name");
+f1.lname1.focus();
+}
+}
+</script>
+<script>
+function mobilenovalidation()
+{
+var pincode=f1.mobile.value;
+var check=/^[0-9]{10}$/;
+if(check.test(pincode))
+{
+
+}
+else
+{
+alert("INVALID MOBILE NO");
+f1.mobile.focus();
+
+}
+}
+</script>
+
+<script>
+function display()
+{
+
+alert("you suceesfully done");
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+<body bgcolor="lightblue">
+
+<form name="ship" method="post"  action=" " >
+
+<center> <h1 class="sj"> Shipping Address</h1></center><br/>
+
+<p style=color:"red"> Review your Address correctly ,so that  we can send to exact destination</p>
+<center><img src="mob3.jpg" alt="error" style="width:180px;height:180px;"></center>
+<center> <p> You Have purchased this Mobile</p>
+<label>First Name </label>
+<input type="text"   size="20" placeholder="Muragesh"  name="fname" size="20"  required autofocus/> <br/><br/>
+<label> Middle Name </label>
+<input type="text"   size="20" placeholder="" name="lname" size="20"   onfocus="firstname()"  required autofocus/> <br/><br/>
+<label> Last Name </label>
+<input type="text"   size="20" placeholder="Nad"   name="lname1"  onfocus="middlename()" required autofocus/> <br/><br/>
+
+
+
+
+
+
+
+
+
+
+
+<label> Mobile No</label>
+
+
+
+
+
+<input type="number"   size="30" placeholder="888-888-8888" name="mobile"  onfocus="last()" required autofocus/> <br/><br/>
+<label> Email-id</label>
+<input type="email"   size="30" placeholder="muragh345@gmail.com" onfocus="mobilenovalidation()" required autofocus/> <br/><br/>
+<label>pincode/Z</label>
+<input type="number"   size="30" placeholder="586103" required autofocus/> <br/><br/>
+<label>colony/stre</label>
+<input type="text"  > <br/><br/>
+<label> Land Mark </label>
+<input type="text"  > <br/><br/>
+<label> city </label>
+<select name="city">
+   <option> Bijapur</option>
+<option> Hubli</option>
+<option> Bangalore</option>
+<option> mysore</option>
+<option> Bidar</option>
+</select>
+
+
+
+<br/><br/>
+<label> state </label>
+<input type="text"   size="30" placeholder="Karnataka" required autofocus/> <br/><br/><br/>
+<p>  Detail Address</p>
+<textarea name="Address" rows="4"  cols="40"> </textarea><br/><br/>
+<input type="submit" value="submit" onclick="display()"> <input type="button"  value="Edit">
+<a href="trans.html"> Transaction pross</a></f=
+</body>
+</html>

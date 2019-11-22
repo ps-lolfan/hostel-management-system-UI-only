@@ -1,0 +1,43 @@
+body{
+	margin:0;
+}
+#menu{
+	background-color:gold;
+	padding:2px;
+        color:red;
+  font-family:Segoe Print;
+}
+#sidenav{
+	background-color:lightgreen;
+	width:20%;
+	height:1000px;
+	float:left;
+}
+.mainpage{
+	width:80%;
+	height:1000px;
+	font-size:22px;
+}
+#sidenav a{
+	text-decoration:none;
+	color:black;
+	background-color:white;
+	padding:10px;
+	margin-top:20px;
+	postion:relative;
+}
+#sidenav ul{
+	list-style-type:none;
+}
+#sidenav li{
+	margin-top:40px;
+}
+
+#prod{
+	background-color:gray;
+	width:300px;
+	height:400px;
+	margin-left:100px;
+
+	
+}

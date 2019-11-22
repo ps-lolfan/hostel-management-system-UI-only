@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DASHBOARD</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+input[type=submit] {
+    width: 18%;
+    background-color: #008CBA;;
+    color: white;
+    padding: 10px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family:sans-serif;
+    font-size: 19px;
+    font-variant: bold; 
+    text-align: center;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+input[type=text], select {
+    width: 38%;
+    padding: 7px;
+    margin: 5px 0;
+    display:inline-block;
+    border: 0.5px solid #ccc;
+    border-radius: 5px;
+      font-color:white;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.mn
+{
+  font-size: 19px;
+  font-family: sans-serif;
+  font-color:white;
+  
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: gray;
+  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+#name{
+  font-size: 40px;
+}
+#ecm{
+  font-size: 100px;
+  word-spacing: 1.5;
+  text-align: center;
+}
+
+.topnav a{
+  float:left;
+  display:block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#search{
+  margin-top: 30px;
+  height: 27px;
+  border:none;
+  font-family: Verdana;
+  font-size: 14px;
+  color:black;
+  margin-left: 50px;
+}
+
+#search-btn{
+  border:none;
+  width: 60px;
+  height: 30px;background-color: forestgreen;
+  font-size: 14px;
+
+}
+
+/* Style the side navigation */
+.sidenav {
+  top:9%;
+    height: 150%;
+    width: 249px;
+    position:absolute;
+    z-index: 1;
+    left: 2;
+    background-color: lightyellow;
+    overflow-x: hidden;
+   
+}
+
+
+/* Side navigation links */
+.sidenav a {
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: Verdana;
+}
+
+/* Change color on hover */
+.sidenav a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the content */
+.content1 {
+     margin-left: 20px;
+    padding-left: 10px;
+    margin-top: 2px;
+    background-color:;
+   
+
+    
+}
+body{
+  background-color: #F8F9F9;
+}
+
+
+.item{
+  border:2px solid black;
+  width: 300px;
+  float: left;
+  margin: 30px;
+}
+.item h1{
+  text-align: center;
+}
+.view-item{
+  background-color: green;
+  margin-left: 35%;
+  padding: 5px;
+  text-decoration:none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  border:1px solid black;
+}
+
+.priceinfo li{
+  list-style-type: none;
+  line-height: 2.5;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+.itemdisc{
+  margin-top: 50px;
+  float: left;
+  margin-left: 30px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+
+.buybtn{
+  background-color: #46F34B;
+  padding: 10px;
+  color: white;
+  text-decoration-line: none;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+.buybtn:hover{
+  background-color:green; 
+}
+.cartbtn{
+  background-color: #F9C940;
+  padding: 10px;
+  color: white;
+  text-decoration-line: none;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+.cartbtn:hover{
+  background-color:#F79209; 
+}
+
+#catg p{
+  
+  color: black;
+  font-size: 17px;
+  font-family: Verdana;
+  text-align: center;
+}
+#catg input{
+
+  margin-top: 0;
+  border-width: 18px;
+  margin-left: 0;
+}
+
+/* special effects span tag in item disc */
+#splchar{
+  color: blue;
+}
+
+.view-item_book{
+  margin-left: 15px;
+  background-color: green;
+  padding: 10px;
+  color: white;
+  text-decoration-line: none;
+  margin:10px;
+}
+
+#Reviews{
+  margin-top: 10px;
+  margin:30px;
+  line-height: 1;
+  font-size: 18px;
+
+}
+#dvPreview
+{
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+    min-height: 20px;
+    min-width: 20px;
+    display: none;
+}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">
+$(function () {
+    $("#fileupload").change(function () {
+        $("#dvPreview").html("");
+        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+        if (regex.test($(this).val().toLowerCase())) {
+            if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+                $("#dvPreview").show();
+                $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
+            }
+            else {
+                if (typeof (FileReader) != "undefined") {
+                    $("#dvPreview").show();
+                    $("#dvPreview").append("<img />");
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#dvPreview img").attr("src", e.target.result);
+                    }
+                    reader.readAsDataURL($(this)[0].files[0]);
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            }
+        } else {
+            alert("Please upload a valid image file.");
+        }
+    });
+});
+</script>
+</head>
+<body>
+  <table width="975"height="10"padding="5000;"margin:"0.5in;">
+
+</table>
+
+
+ 
+    <script type="text/javascript">
+
+
+function a()
+{
+var a=emp.intermediary.value;
+var c=/^[A-Za-z0-9]{5,}$/;
+var b=/^[A-Za-z0-9]{5,}[_][A-Za-z0-9]{3,}$/;
+if(b.test(a) | c.test(a))
+{
+}
+else
+{
+alert("USERNAME MUST BE OF MIN 5 CHARACTERS & MUST BE ALPHANUMERIC");
+emp.intermediary.focus();
+}
+}
+function pwd()
+{
+var a=emp.intermediaryna.value;
+var c=/^[A-Za-z0-9]{5,}$/;
+var b=/^[A-Za-z0-9]{5,}[_][A-Za-z0-9]{5,}$/;
+if(b.test(a) | c.test(a))
+{
+
+}
+else
+{
+alert("PASSWORD MUST BE OF MIN 5 CHARACTERS & MUST BE ALPHANUMERIC");
+emp.intermediaryna.focus();
+}
+}
+
+function mon()
+{
+var m=emp.mob.value;                
+
+var check=/^[0]?[789]\d{9}$/;
+if(check.test(m))
+{
+
+}
+else
+{
+alert("Enter Valid Mobile Number");
+emp.mobnum.focus();
+}
+}
+
+function cpwd()
+{
+  var p=emp.intermediaryna.value;
+  var c=emp.i.value;
+  if(p==c)
+  {
+  }
+  else
+  {
+    alert("Invalid password");
+    emp.i.focus();
+  }
+}
+
+function mid()
+{
+var a=emp.intermediaryn.value;
+var c=/^[0-9]{6}$/;
+if(c.test(a))
+{
+
+}
+else
+{
+alert("Enter Valid Id");
+emp.intermediaryn.focus();
+}
+}
+
+function fname()
+{
+var a=emp.studentname.value;
+var c=/^[a-z A-Z]+$/;
+
+if(c.test(a))
+{
+
+}
+else
+{
+alert("Enter Valid First Name");
+emp.studentname.focus();
+}
+}
+
+function sname()
+{
+var a=emp.intermediaryname.value;
+var c=/^[a-z A-Z]+$/;
+
+if(c.test(a))
+{
+
+}
+else
+{
+alert("Enter Valid Last Name");
+emp.intermediaryname.focus();
+}
+}
+
+
+        function ValidateEmail()
+{
+  var inputText=emp.email.value;
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(mailformat.test(inputText))
+{
+
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.emp.email.focus();
+return false;
+}
+}
+ 
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode != 46 && charCode > 31 &&
+               (charCode < 48 || charCode > 57)) {
+               alert("Enter Number");
+               return false;
+            }
+            return true;
+        }
+
+
+function Captcha(){
+                     var alpha = new Array("What is 1+2","what is 2+3");
+                     var i;
+                     for (i=0;i<=3;i++){
+                       var a = alpha[Math.floor(Math.random() * alpha.length)];
+                      }
+                    var code = a;
+                    document.getElementById("mainCaptcha").value = code
+                  }
+                  function ValidCaptcha(){
+                      var string1 = document.getElementById('mainCaptcha').value;
+                      var string2 = removeSpaces(document.getElementById('txtInput').value);
+                     
+                      if ((string1 =="What is 1+2"  && string2==3) || (string1=="what is 2+3" && string2==5))
+
+                        alert("Registered Successfully");
+                     else     
+                        alert("Invalid Captcha Answer");
+                      
+                  }
+                  function removeSpaces(string){
+                    return string.split(' ').join('');
+                  }        
+ 
+ function del()
+ {
+  alert("Record deleted");
+ }
+
+ function up()
+ {
+  alert("Record Update");
+ }
+
+
+    </script>
+ 
+ 
+</head>
+
+<div class="topnav">
+  <span id="name"><font color="yellow"><text align="center">Add Manager</text></font></span>   <b><a href="mobile.html">Back </a></b>
+</div>
+<br>
+<br>
+
+
+
+     
+<body onload="Captcha()">
+    <form name="emp" action=""  method="post">
+        <div class="content1">
+        <table align="center" width=80% width="200%" cellspacing="4" cellpadding="4" border="5">
+            <tr>
+              &nbsp &nbsp  <td colspan="2" align="center"><center><font size="5"><b>Manager Registration Form </b></font>  </center>   
+</td>  
+                
+            </tr>
+ 
+            <tr>
+              
+                <td align="left" valign="top" width="41%"><label class="mn" for="fname">First Name</label><span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" name="studentname" size="24" placeholder="First name..."></td>
+            </tr>
+<tr>
+                <td align="left" valign="top" width="41%"><label class="mn" for="fname">Last Name</label><span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" onfocus="fname()" name="intermediaryname" size="24" placeholder="Last name..."> &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp<label class="mn" for="fname">Gender</label><span style="color:red">*</span> <select><option>Male</option>
+                  <option>Female</option></select></td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%"><label class="mn" for="fname">Manager Id</label><span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" onfocus="sname()" name="intermediaryn" size="24"></td>
+
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%"><label class="mn" for="fname">Username</label><span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" onfocus="mid()" name="intermediary" size="24" placeholder="Username..."></td>
+
+            </tr>
+<tr>
+                <td align="left" valign="top" width="41%"><label class="mn" for="fname">Password</label><span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="Password" onfocus="a()"  name="intermediaryna" size="24" placeholder="Password..."></td>
+
+            </tr>
+<tr>
+                <td align="left" valign="top" width="41%"><label class="mn" for="fname">Confirm Password</label><span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="Password" onfocus="pwd()"  name="i" size="24" placeholder="ConfirmPassword..."></td>
+
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%"><label class="mn" for="fname">Date of Joining</label><span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="Date" onfocus="cpwd()"  value="" name="mobnu" maxlength="10"  </td>
+            </tr>
+
+
+ <tr>
+                <td colspan="2" align="center"><font size="3"><center><label class="mn" for="fname"><u>Personal Details</u></label></center></font></td>
+                
+            </tr>
+
+            <tr>
+                <td align="left" valign="top" width="41%"><label class="mn" for="fname">Qualification</label><span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value=""  name="intermediarynam" size="24" placeholder="Graduate..."> </td>
+            </tr>
+
+
+<tr>
+                <td align="left" valign="top" width="41%"><label class="mn" for="fname">Date of birth</label><span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="Date"   value="" name="mobnum" maxlength="10"  </td>
+            </tr>
+
+
+
+
+
+
+<tr>
+                <td align="left" valign="top" width="41%"><label class="mn" for="fname">Mobile Number</label><span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="number"  name="mob" maxlength="10"></td>
+            </tr>
+
+
+
+            <tr>
+                <td align="left" valign="top" width="41%"><label class="mn" for="fname">Email</label><span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="email"  value="" name="email" size="24"  onfocus="mon()" ></td>
+            </tr>
+ 
+ <tr>
+                <td align="left" valign="top" width="41%"><label class="mn" for="fname">Postal Address</label></td>
+ 
+                <td width="57%"><input type="text"  onfocus="ValidateEmail()"  size="40"> </td>
+            </tr>
+  
+  <tr>
+                <td colspan="2">
+                    <p align="center">
+                       <b> Answer to the below Question??</b>
+                        <br>
+               <input type="text" name="mainCaptcha" id="mainCaptcha"/>=<input type="text" id="txtInput"/><br>
+              <input type="submit" id="refresh" value="Refresh" onclick="Captcha();" />
+                   
+                         
+
+                        
+            </tr>
+ 
+
+ <tr>
+                <td colspan="2">
+                    <p align="center">
+        <input id="Button1" type="submit" value="SUBMIT" onclick="alert(ValidCaptcha());"/>
+        &nbsp &nbsp <input type="submit"  value="Update" onclick="up()">&nbsp &nbsp <input type="submit" value="delete" onclick="del()">&nbsp &nbsp 
+                <input type="submit" value="  Reset All   " name="B5">
+&nbsp &nbsp
+                <a href="mobile.html"> <input type="submit" value="Back"> </a></td>
+                &nbsp &nbsp
+            </tr>
+
+           <input id="fileupload" type="file" />
+<hr />
+<b>Live Preview</b>
+<br />
+<br />
+<div id="dvPreview">
+</div>
+        </table>
+
+        </div>
+
+    </form>
+
+</body>
+</html>

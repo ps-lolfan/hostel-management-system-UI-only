@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Monthly Meal Count"
+	},
+	axisY: {
+		title: "Number Of Students"
+	},
+	data: [{        
+		type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		legendText: "100,000 = 100",
+		dataPoints: [      
+			{ y: 300878, label: "THIS MONTH" },
+			{ y: 266455,  label: "July" },
+			{ y: 169709,  label: "June" },
+			{ y: 158400,  label: "May" },
+			{ y: 142503,  label: "April" },
+			{ y: 101500, label: "March" },
+			{ y: 97800,  label: "Feb" },
+			{ y: 80000,  label: "Jan" }
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

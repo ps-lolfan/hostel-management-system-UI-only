@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+    <title>Material Login Form</title>
+    
+    
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+	 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif" rel="stylesheet">
+<link rel="stylesheet" href="css/reset.css">
+
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+<script type="text/javascript">
+function validate()
+{
+  var username=f1.Username.value;
+  var pass=f1.lastname.value;
+  var type=f1.UserType.value;
+  if(type=='warden')
+  {
+      
+  if(username==null || username=="" && pass==null || pass=="")
+  {
+    alert("Provide Login Credentials");
+  }
+  else if(username=="kletech" && pass=="123456")
+  {
+    
+    window.open("mobile.html"); 
+  }
+  else
+  {
+  alert("Login Unsuccessful");
+  }
+}
+   else if(type=='managers')
+   {
+        if(username==null || username=="" && pass==null || pass=="")
+  {
+    alert("Provide Login Credentials");
+  }
+  else if(username=="kletech" && pass=="123456")
+  {
+    
+    window.open("mobile2.html"); 
+  }
+  else
+  {
+  alert("Login Unsuccessful");
+  }     
+}
+
+   else
+{
+         if(username==null || username=="" && pass==null || pass=="")
+  {
+    alert("Provide Login Credentials");
+  }
+  else if(username=="kletech" && pass=="123456")
+  {
+    
+    window.open("mobile3.html"); 
+  }
+  else
+  {
+  alert("Login Unsuccessful");
+  }
+
+}
+}
+</script>  
+
+<style>
+
+input[type=text], select {
+    width: 50%;
+  height:50%;
+    margin: 5px 0;
+  
+  
+    
+    border-radius: 5px;
+    padding:4px;
+    
+      font-color:white;
+    
+    font-size: 19px;
+}
+#fname{
+border-radius:10px;
+}
+
+input[type=Password], select {
+    width: 50%;
+    padding: 2px;
+    margin: 5px 0;
+  
+  font-color:white;
+
+    font-size: 19px;
+  
+    border-radius:5px;
+    
+}
+
+
+
+
+
+
+
+input[type=submit] {
+    width: 30%;
+    background-color: #008CBA;;
+    color: white;
+    padding: 10px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family:sans-serif;
+    font-size: 19px;
+    font-variant: bold; 
+    text-align: center;
+}
+
+input[type=submit]:hover {
+  background-color: #6ADE12;-webkit-transform: rotate(360deg);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     width: 300px; 
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+body {
+  
+
+  background-image: url("kl.jpg");
+   
+
+    /* Center and scale the image nicely */
+   
+    
+    background-size: cover;
+    font-family: 'Open Sans';
+  
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:maroon;
+  background-size: 4px;
+}
+.topnav1 {
+  
+  background-color:lightyellow;
+  background-size:0px;
+  font-size:20px;
+  font-family: sans-serif;
+ 
+}
+
+.topnav a {
+  float: left;
+  color:gold;
+  text-align: center;
+  padding: 14px 10px;
+  text-decoration: underline;
+  font-size: 19px;
+  background-color:;
+  font-family: Verdana;
+}
+
+.topnav a:hover {
+  color:gold;
+  text-decoration: underline;
+  font-size: 19px;
+  font-family: Verdana;
+  
+}
+
+.topnav a.active {
+  
+  color: gold;
+}
+  h6 {
+    text-shadow: 0 0 3px #FF0000;
+	text-size:32px;
+
+}
+
+.mn
+{
+  font-size: 20px;
+  font-family: verdana;
+  font-color:maroon;
+  font-weight: bolder;
+}
+.img2
+{
+width: 100px;
+height: 100px;
+border-radius: 50%;
+position: absolute;
+top: -10%;
+left: calc(50% - 50px);
+} 
+
+  
+    .content1{
+      
+
+width: 500px;
+height: 546px;
+background: rgba(0.5, 0.5, 0.5, 0.5);
+color: #fff;
+top: 54%;
+left: 68%;
+position: absolute;
+transform: translate(-50%,-50%);
+box-sizing: border-box; 
+padding: 70px 30px;
+}
+
+ .t
+{
+width:37px;
+height:40px
+}
+h2{
+font-color:white;
+}
+.g{
+  height:17px;
+  font-size: 28px;
+  top:23%;
+}
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+}
+
+.styled-select select {
+   background:white;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+}
+
+.styled-select.slate {
+   
+   height: 34px;
+   width: 300px;
+}
+
+.styled-select.slate select {
+   border: 1px solid #ccc;
+   font-size: 16px;
+   height: 34px;
+   width: 268px;
+}
+
+/* -------------------- Rounded Corners */
+.rounded {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+}
+
+.semi-square {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+/* -------------------- Colors: Background */
+.slate   { background-color: #ddd; }
+.green   { background-color: #779126; }
+.blue    { background-color: #3b8ec2; }
+.yellow  { background-color: #eec111; }
+.black   { background-color: #000; }
+
+/* -------------------- Colors: Text */
+.slate select   { color: #000; }
+.green select   { color: #fff; }
+.blue select    { color: #fff; }
+.yellow select  { color: #000; }
+.black select   { color: #fff; }
+
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+h1{
+  font-size: 43px;
+  font-family: sans-serif;
+  text-align: center;
+}
+.img1
+{
+  heigt:24px;
+}
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 5px;
+  
+  text-align: center;
+}
+.fa fa-user icon{
+  border:0px;
+  padding: 0px;
+  background-color: transparent;
+}
+.t
+{
+width:37px;
+height:40px
+}
+h1{
+	font-color:red;
+}
+h2{
+font-color:white;
+font-size: 38px;
+margin-left: 12%;
+}
+.g{
+  height:17px;
+  font-size: 28px;
+  top:23%;
+}
+
+body 
+* {box-sizing: border-box;}
+
+
+
+.img1
+{
+  heigt:24px;
+}
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 5px;
+  
+  text-align: center;
+}
+.fa fa-user icon{
+  border:0px;
+  padding: 0px;
+  background-color: transparent;
+}
+
+
+
+
+    .awesome {
+      
+      font-family: sans-serif;
+      
+      
+      width:100%;
+      
+      
+      text-align: center;
+      
+      color:#313131;
+      
+      font-weight: bold;
+      position: absolute;
+      -webkit-animation:colorchange 20s infinite alternate;
+      
+      
+    }
+
+    @-webkit-keyframes colorchange {
+      0% {
+        
+        color: blue;
+      }
+      
+      10% {
+        
+        color: #8e44ad;
+      }
+      
+      20% {
+        
+        color: #1abc9c;
+      }
+      
+      30% {
+        
+        color: #d35400;
+      }
+      
+      40% {
+        
+        color: blue;
+      }
+      
+      50% {
+        
+        color: #34495e;
+      }
+      
+      60% {
+        
+        color: blue;
+      }
+      
+      70% {
+        
+        color: #2980b9;
+      }
+      80% {
+     
+        color: #f1c40f;
+      }
+      
+      90% {
+     
+        color: #2980b9;
+      }
+      
+      100% {
+        
+        color: pink;
+      }
+.box-with-text {
+  font-size: 200px;
+
+  background-image: url("siri.jpg");
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.font1{font-family: 'Libre Barcode 39', cursive;
+     
+    
+   
+  
+  
+
+}
+.d{
+  text-align: right;
+  font-size: 38px;
+  margin-left: 4%;
+}
+ 
+  </style>
+</head>
+<body>
+<br>
+  
+  <right>
+    <h2 class="d"><font color="white">Hostel Management System</font></h2> 
+  </right>
+
+
+
+<br>
+
+<div class="content1">
+  <form name="f1" method="post" >
+ <a href="home.html"> <img  src="s.jpg" class="img2"> </a>
+ <center>  <h1 class ="awesome"> Login Here</h1></center><br><br><br><br>
+        <div>
+  <img src="use.png"  class="w3-circle" > <select id="country" name="UserType" class="styled-select slate">
+      <option value="warden">Warden</option>
+      <option value="managers">Managers</option>
+      <option value="students">Students</option>
+    </select>
+  </div>
+  
+
+ <!--  <label class="mn" for="fname">Username</label>-->&nbsp
+   <!--<i class="fa fa-envelope icon"></i>-->
+   <div>
+   <img src="mail2.png"  class="w3-circle" >
+   <input type="text" id="fname" name="Username" placeholder="Username...">
+
+
+</div>
+<br><br>
+<div>
+
+
+   <!--<label class="mn" for="lname">Password</label>-->&nbsp
+  <!-- <i class="fa fa-key icon"></i>-->
+   <img src="key2.png"  class="w3-circle" >&nbsp &nbsp
+    <input type="Password" id="lname" name="lastname" placeholder="Password...">
+</div>
+  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp<br><br>
+  <input type="submit" id="demo"   onclick="validate()" value="Sign in">&nbsp &nbsp 
+  <a style="font-size:16px; float:right; color:white;" href="forgot.html" >Forgot Password</a>
+ 
+
+  </form>
+</div>
+</body>
+</html>
